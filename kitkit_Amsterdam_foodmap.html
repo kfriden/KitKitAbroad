@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="css/kitkitcss.css" rel="stylesheet" type="text/css" />
+
+    <title>KitKit Abroad</title>
+    <script>
+      $(document).ready(function() {
+        $('#gallery img').each(function() {
+          var imgFile = $(this).attr('src');
+      
+          var preloadImage = new Image();
+          var imgExt = /(\.\w{3,4}$)/;
+          preloadImage.src = imgFile.replace(imgExt,'_h$1');
+          $(this).hover (
+            function() {
+              $(this).attr('src', preloadImage.src);
+            },
+            function() {
+              $(this).attr('src', imgFile);
+            }
+      
+          ); // end hover
+      
+        }); // end each
+      }); // end ready
+
+      $(document).ready(function() {
+        $('#gallery2 img').each(function() {
+          var imgFile = $(this).attr('src');
+      
+          var preloadImage = new Image();
+          var imgExt = /(\.\w{3,4}$)/;
+          preloadImage.src = imgFile.replace(imgExt,'_o$1');
+          $(this).hover (
+            function() {
+              $(this).attr('src', preloadImage.src);
+            },
+            function() {
+              $(this).attr('src', imgFile);
+            }
+      
+          ); // end hover
+      
+        }); // end each
+        $('.dropdown').hover(function(){
+          $('.dropdown-toggle', this).trigger('click');
+        }); // end hover
+      }); // end ready
+      $(window).load(function()
+              {
+                  function preload(arrayOfImages)
+                  {
+                      $(arrayOfImages).each(function()
+                      {
+                          $('<img/>')[0].src = this;
+                      });
+                  }
+                  preload([
+                      'images/ovkaart.jpg',
+                      'images/kinderdijk.jpg'  
+                  ]);
+              });
+      </script>
+  </head>
+
+  <body>
+      <div class="white-background">
+          <img src="images/kitkitabroad.png" class="header-image">
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="kitkitabroad4.html">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a class="nav-link" href="kitkit_about.html">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Rotterdam
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="kitkit_Rotterdam.html">About the City</a>
+                          <a class="dropdown-item" href="kitkit_Rotterdam_foodmap.html">Food Map</a>
+                          <a class="dropdown-item" href="kitkit_Rotterdam_mustsee.html">Must See</a>
+                        </div>
+                      </li>
+                      <li class="nav-item dropdown active">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Amsterdam
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="kitkit_Amsterdam.html">About the City</a>
+                            <a class="dropdown-item" href="kitkit_Amsterdam_foodmap.html">Food Map</a>
+                            <a class="dropdown-item" href="kitkit_Amsterdam_mustsee.html">Must See</a>
+                          </div>
+                      </li>
+                      <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Utrecht
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="kitkit_Utrecht.html">About the City</a>
+                              <a class="dropdown-item" href="kitkit_Utrecht_foodmap.html">Food Map</a>
+                              <a class="dropdown-item" href="kitkit_Utrecht_mustsee.html">Must See</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Scheveningen
+                                </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="kitkit_Scheveningen.html">About the City</a>
+                                <a class="dropdown-item" href="kitkit_Scheveningen_foodmap.html">Food Map</a>
+                                <a class="dropdown-item" href="kitkit_Scheveningen_mustsee.html">Must See</a>
+                            </div>
+                        </li>
+                    
+                    <li class="nav-item">
+                      <a class="nav-link" href="kitkit_traveltips.html">Travel Tips</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="kitkit_projects.html">Projects</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline">
+                      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                    <button type="button" class="btn btn-primary col-4 d-sm-none" data-toggle="modal" data-target="#exampleModal">
+                        Travel Tips!
+                    </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">KitKit's Travel Tips!</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <a href="https://www.facebook.com/IamKitKit92" target="_blank"><img src="images/facebook.png" alt="facebook" width="55" class="picture-top-f"></a>      
+                              <a href="https://www.instagram.com/iarekitkit/?hl=en" target="_blank"><img src="images/instagram.png"  alt="instagram" width="55" class="picture-top-i"></a>  
+                              <a href="https://twitter.com/iareKitKit" target="_blank"><img src="images/twitter2.png"  alt="twitter" width="60" class="picture-top-t"></a>
+                              <a href="https://www.pinterest.com/pikababe23/ik-hou-van-je-nederlands/" target="_blank"><img src="images/pinterest2.png"  alt="pinterest" width="60" class="picture-top-p"></a>
+                            </div>
+                            <div class="modal-body">
+                            <h4>Transportation in the Netherlands can be a hassle at times, don't stress and get an OV chip card!</h4>
+                            <div id="gallery2"><a href="images/ovkaart.jpg" class="chip-card"><img class="chip-card" src="images/ovkaart.jpg" alt="OV Chipcard"/></a></div>
+              
+                            <p>Getting an OV chipcard saves time so you can explore more! Simply purchase an anonymous chipcard (can find them being sold at airports, train stations, or 
+                              newstands) and load your euros onto the card. Make sure at least 20 euros are on the card when using public transportation. You can find out more
+                              <a href="https://www.ov-chipkaart.nl/everything-about-travelling/different-types-of-passenger/tourists.htm" target="_blank">here</a></p>
+              
+                            <h3>Must see places to visit in the Netherlands</h3>
+                            <div id="gallery"><a href="images/kinderdijk.jpg" class="windmill"><img class="windmill_h" src="images/kinderdijk.jpg" alt="windmills" /></a></div>
+              
+                            <p>Explore the best sites at Kinderdijk, a UNESCO heritage site, just outside of Rotterdam</p>
+                            <p>Relax at <a href="http://www.meliefbender.nl/">Melief Bender</a> and <a href="http://biergartenrotterdam.nl/">Biergarten</a>, both with an impressive beer selection</p>
+                            <p>Enjoy gorgeous paintings and art at the Rijksmuseum in the heart of Amsterdam</p>
+                            <p>If you are a convention goer, the Jaarbeurs in Utrecht holds (one of my favorites) Dutch Comic Con every March and November. Get tickets <a href="http://www.dutchcomiccon.com/en">here</a></p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </nav>
+              </nav>
+      
+      <div class="container-fluid">
+        <div class="row">
+          <aside id="sidebar" class="d-none col-sm-6 d-sm-block col-md-3">
+              <a href="https://www.facebook.com/IamKitKit92" target="_blank"><img src="images/facebook.png" alt="facebook" width="55" class="picture-top-f"></a>      
+              <a href="https://www.instagram.com/iarekitkit/?hl=en" target="_blank"><img src="images/instagram.png"  alt="instagram" width="55" class="picture-top-i"></a>  
+              <a href="https://twitter.com/iareKitKit" target="_blank"><img src="images/twitter2.png"  alt="twitter" width="60" class="picture-top-t"></a>
+              <a href="https://www.pinterest.com/pikababe23/ik-hou-van-je-nederlands/" target="_blank"><img src="images/pinterest2.png"  alt="pinterest" width="60" class="picture-top-p"></a>
+              <h2>KitKit's Travel Tips</h2>
+
+              <h4>Transportation in the Netherlands can be a hassle at times, don't stress and get an OV chip card!</h4>
+              <div id="gallery2"><a href="images/ovkaart.jpg" class="chip-card"><img class="chip-card" src="images/ovkaart.jpg" alt="OV Chipcard"/></a></div>
+
+              <p>Getting an OV chipcard saves time so you can explore more! Simply purchase an anonymous chipcard (can find them being sold at airports, train stations, or 
+                newstands) and load your euros onto the card. Make sure at least 20 euros are on the card when using public transportation. You can find out more
+                <a href="https://www.ov-chipkaart.nl/everything-about-travelling/different-types-of-passenger/tourists.htm" target="_blank">here</a></p>
+
+              <h3>Must see places to visit in the Netherlands</h3>
+              <div id="gallery"><a href="images/kinderdijk.jpg" class="windmill"><img class="windmill_h" src="images/kinderdijk.jpg" alt="windmills" /></a></div>
+
+              <p>Explore the best sites at Kinderdijk, a UNESCO heritage site, just outside of Rotterdam</p>
+              <p>Relax at <a href="http://www.meliefbender.nl/">Melief Bender</a> and <a href="http://biergartenrotterdam.nl/">Biergarten</a>, both with an impressive beer selection</p>
+              <p>Enjoy gorgeous paintings and art at the Rijksmuseum in the heart of Amsterdam</p>
+              <p>If you are a convention goer, the Jaarbeurs in Utrecht holds (one of my favorites) Dutch Comic Con every March and November. Get tickets <a href="http://www.dutchcomiccon.com/en">here</a></p>
+
+          </aside>
+          <article class="col-12 col-sm-6 col-md-9 wrap">
+              <center><div class="map-responsive">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16388.217938215857!2d4.894988261852296!3d52.368186555480776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c63fb5949a7755%3A0x6600fd4cb7c0af8d!2sAmsterdam%2C+Netherlands!5e0!3m2!1sen!2sus!4v1561571362366!5m2!1sen!2sus" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+              </div></center>
+              <script> 
+                  $(document).ready(function() {
+                      $('#FoodPlaces').hide();
+                      $('a.triggerFoodPlaces').click(function(evt) {
+                      evt.preventDefault();
+                  $('#FoodPlaces').slideToggle(500);
+                  }); // end click
+      
+              }); // end ready
+          </script>
+            
+            <h4><a class="triggerFoodPlaces" href="#">American</a></h4>
+
+            <div id="FoodPlaces">
+              <dl>
+              <dd><span style="color:rgb(183, 0, 255)"><b>Hard Rock Cafe Amsterdam:</b></span> If you have been to any other Hard Rock Cafe, the menu is fairly the same just you are 
+              in Amsterdam. Great burgers, fries, and sandwiches.</dd>
+              <dd><span style="color:rgb(183, 0, 255)"><b>Burger Meester:</b></span> This place has an amazing selection of burgers to choose from, so make sure to come hungry! It's also
+              very close to the ARTIS Zoo which I also recommend checking out. </dd>
+              <dd><span style="color:rgb(183, 0, 255)"><b>Thrill Grill:</b></span> Here you can feel good about what you eat as it's locally sourced and environmentally friendly. Thrill
+              Grill has a little bit of everything to please everyone. </dd>
+              <dd><span style="color: rgb(183, 0, 255)"><b>Bulls and Dogs:</b></span> At Bulls and Dogs you can get hot dogs with a twist, and they even offer hotdogs paired with special 
+              beers. They also serve cocktails, sides, and a big selection of freakshakes. </dd>
+              
+              </dl>
+          </div>
+          <script> 
+              $(document).ready(function() {
+                  $('#FoodPlaces2').hide();
+                  $('a.triggerFoodPlaces2').click(function(evt) {
+                  evt.preventDefault();
+              $('#FoodPlaces2').slideToggle(500);
+              }); // end click
+  
+          }); // end ready
+      </script>
+        
+        <h4><a class="triggerFoodPlaces2" href="#">Asian</a></h4>
+
+        <div id="FoodPlaces2">
+          <dl>
+          <dd><span style="color:rgb(0, 166, 243)"><b>La Mian:</b></span> Not super extensive menu here but what they offer is outsanding! Perfect portions of noodles and noodle soups 
+          keeps bring people back for more.</dd>
+          <dd><span style="color:rgb(0, 166, 243)"><b>Miss Korea BBQ:</b></span> All you can eat Korean BBQ within 2.5 hours time. Choose from traditional delicious to eat or barbecue,
+          prices are very reasonable here. </dd>
+          <dd><span style="color:rgb(0, 166, 243)"><b>Izakaya Asian Kitchen and Bar:</b></span> More on the expensive side, this Asian/Peruvian fusion restaurant offers so much, its 
+          often hard to choose. Incredible drink selection. </dd>
+          <dd><span style="color:rgb(0, 166, 243)"><b>Tomo Sushi:</b></span> Situated right near another great sushi place Shabu Shabu, Tomo Sushi has a great sushi and sashimi selection
+          as well as 2 prix fix dinner options. </dd> 
+          </dl>
+      </div>
+      <script> 
+          $(document).ready(function() {
+              $('#FoodPlaces3').hide();
+              $('a.triggerFoodPlaces3').click(function(evt) {
+              evt.preventDefault();
+          $('#FoodPlaces3').slideToggle(500);
+          }); // end click
+
+      }); // end ready
+  </script>
+    
+    <h4><a class="triggerFoodPlaces3" href="#">Dutch/Traditional</a></h4>
+
+    <div id="FoodPlaces3">
+      <dl>
+      <dd><span style="color:rgb(33, 201, 0)"><b>Haesje Claes:</b></span> A local told me this is a great place to experience traditional Dutch food. Reasonably priced and great food
+      and service. Make sure to make a reservation as this place can get pretty popular on weekends.</dd>
+      <dd><span style="color:rgb(33, 201, 0)"><b>The Copper Kettle:</b></span> Another great place if you are in search of trying traditional Dutch cuisine. One of the more fun parts
+      is the tasting platters they offer. </dd>
+      <dd><span style="color:rgb(33, 201, 0)"><b>De Fles:</b></span> Fun little place located in one of the oldest cellars in Amsterdam. Serving up yummy fish and meat dishes served 
+      with salad and fries. I highly recommend the mussels for dinner!</dd> 
+      </dl>
+    </div>
+    <script> 
+        $(document).ready(function() {
+            $('#FoodPlaces4').hide();
+            $('a.triggerFoodPlaces4').click(function(evt) {
+            evt.preventDefault();
+        $('#FoodPlaces4').slideToggle(500);
+        }); // end click
+
+    }); // end ready
+</script>
+  
+  <h4><a class="triggerFoodPlaces4" href="#">Sweets/Desserts</a></h4>
+
+  <div id="FoodPlaces4">
+    <dl>
+    <dd><span style="color:rgb(201, 181, 0)"><b>Pancakehouse Upstairs:</b></span> Dubbed the smallest restaurant in Europe, this pancake house is located in an old Amsterdam house 
+    dating back to 1539 with only 4 tables! Here you have a choice between different kinds of savory and sweet pancakes.</dd>
+    <dd><span style="color:rgb(201, 181, 0)"><b>Melly's Cookies Bar:</b></span> Great place to get anything from cookies, cakes, pastries, and sandwiches. Cozy place to sit and enjoy
+    a cookie or piece of cake. Some say some of the best cookies they ever had.</dd>
+    <dd><span style="color:rgb(201, 181, 0)"><b>The Pancake Bakery:</b></span> If the border-line food porn video on the homepage of their website isn't an indication of how amazing
+    their food must be then I don't know what is! This place has pretty much every Dutch pancake imaginable, savory and sweet. Also offers poffertjes (small pancakes), and omelets.</dd>
+    
+    </dl>
+  </div>
+  <script> 
+      $(document).ready(function() {
+          $('#FoodPlaces5').hide();
+          $('a.triggerFoodPlaces5').click(function(evt) {
+          evt.preventDefault();
+      $('#FoodPlaces5').slideToggle(500);
+      }); // end click
+
+  }); // end ready
+</script>
+
+<h4><a class="triggerFoodPlaces5" href="#">Seafood</a></h4>
+
+<div id="FoodPlaces5">
+  <dl>
+  <dd><span style="color:rgb(238, 112, 10)"><b>Mr. Crab Bistro:</b></span> For the fish/seafood lover this is the place to be. Great selection of burgers, tacos, soups, fish and chips,
+  as well as small snacks.</dd>
+  <dd><span style="color:rgb(238, 112, 10)"><b>Brut de Mer:</b></span> Insanely fresh seafood with friendly service. I personally don't eat oysters, but I hear they are very good
+  here.</dd>
+  <dd><span style="color:rgb(238, 112, 10)"><b>The Good Company:</b></span> Excellent fried fish snacks, especially the shrimp croquettes. This place also makes fresh fish and chips
+  daily and focuses on fresh local products and sustainable fish!</dd>
+  
+  
+  </dl>
+</div>            
+          </article>
+        </div>
+        </div>
+      </div>
+
+  </body>
+  </html>
